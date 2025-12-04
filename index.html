@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timothy Chen Xian Yii | Data Analytics Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Using FontAwesome for simple icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-wrapper">
+            <div class="logo">Timothy Chen</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact" class="btn-primary">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container hero-content">
+            <h1>Hi, I'm Timothy Chen.</h1>
+            <h2>Data Analytics Developer & Data Scientist</h2>
+            <p>Specializing in ETL Pipelines, AI Implementation, and Cloud Data Warehousing (Snowflake).</p>
+            <div class="hero-btns">
+                <a href="#experience" class="btn-outline">View My Work</a>
+                <!-- Add your actual links below later -->
+                <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About / Education Section -->
+    <section id="about" class="section-light">
+        <div class="container">
+            <h3 class="section-title">Education & Background</h3>
+            <div class="education-grid">
+                <div class="edu-card">
+                    <i class="fas fa-graduation-cap icon-accent"></i>
+                    <h4>Master in Data Science</h4>
+                    <p class="edu-school">University of Malaya (2023 - 2024)</p>
+                    <p class="edu-detail"><strong>CGPA: 3.98 (Pass with Distinction)</strong></p>
+                    <p class="edu-desc">Focus on LLMs and Transformer Techniques.</p>
+                </div>
+                <div class="edu-card">
+                    <i class="fas fa-university icon-accent"></i>
+                    <h4>BSc (Hons) Industrial Statistics</h4>
+                    <p class="edu-school">Sunway University (2019 - 2022)</p>
+                    <p class="edu-detail"><strong>CGPA: 3.52 (First Class Honors)</strong></p>
+                    <p class="edu-desc">Focus on Statistical Modeling and Machine Learning.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section-white">
+        <div class="container">
+            <h3 class="section-title">Work Experience</h3>
+            
+            <div class="timeline">
+                <!-- Job 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-date">Aug 2024 – Oct 2025</div>
+                    <div class="timeline-content">
+                        <h4>Data Analytics Developer</h4>
+                        <span class="company">X-Fab Sarawak Sdn Bhd</span>
+                        <ul>
+                            <li>Developed AI models to resolve fab cycle time bottlenecks and enhance throughput.</li>
+                            <li>Built robust ETL pipelines (SQL/Python) and prototyped scalable global wafer map storage on Snowflake.</li>
+                            <li>Implemented CI/CD pipelines (Jenkins) for automating RShiny and Python script deployment.</li>
+                            <li>Created Python scripts for low-yield detection with automated PDF reporting.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Job 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-date">Jan 2022 – Mar 2022</div>
+                    <div class="timeline-content">
+                        <h4>Data Analyst Intern</h4>
+                        <span class="company">Pandai Education Sdn Bhd</span>
+                        <ul>
+                            <li>Built real-time data dashboards for end-user clients.</li>
+                            <li>Analyzed user behaviors through graphical visualization to support decision-making.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section-light">
+        <div class="container">
+            <h3 class="section-title">Key Projects</h3>
+            <div class="project-grid">
+                
+                <div class="project-card">
+                    <div class="card-header">
+                        <i class="fas fa-brain"></i>
+                        <h4>Depression Detection via LLMs</h4>
+                    </div>
+                    <p><strong>Tech:</strong> Python, BERT, Transformers, Deep Learning</p>
+                    <p>Developed a Transformer-based LLM model to detect depressive language patterns in Reddit posts, supporting early mental health intervention.</p>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-header">
+                        <i class="fas fa-heartbeat"></i>
+                        <h4>Heart Disease Prediction</h4>
+                    </div>
+                    <p><strong>Tech:</strong> Logistic Regression, Decision Tree, Naive Bayes</p>
+                    <p>Built a supervised classification model to predict heart disease risk from patient health data, comparing algorithms for optimal accuracy.</p>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-header">
+                        <i class="fas fa-microchip"></i>
+                        <h4>Fab Yield Optimization</h4>
+                    </div>
+                    <p><strong>Tech:</strong> RShiny, Python, SQL</p>
+                    <p>Developed an RShiny web app for tool chamber analysis and automated Python scripts for low-yield detection.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section-white">
+        <div class="container">
+            <h3 class="section-title">Technical Skills</h3>
+            <div class="skills-wrapper">
+                <div class="skill-category">
+                    <h5>Languages & Tools</h5>
+                    <div class="tags">
+                        <span>Python</span><span>R</span><span>SQL</span><span>Snowflake</span>
+                        <span>Docker</span><span>Git</span><span>Jenkins</span><span>MSSQL</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h5>Core Competencies</h5>
+                    <div class="tags">
+                        <span>ETL Design</span><span>Machine Learning</span><span>LLM Modelling</span>
+                        <span>CI/CD Pipelines</span><span>Dashboarding</span><span>Data Warehousing</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contact -->
+    <footer id="contact">
+        <div class="container">
+            <h3>Let's Connect</h3>
+            <p>I am currently open to new opportunities in Data Science and Analytics.</p>
+            <div class="contact-info">
+                <p><i class="fas fa-envelope"></i> tcxy.98@gmail.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Kuala Lumpur, Malaysia</p>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2025 Timothy Chen Xian Yii.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
