@@ -199,18 +199,28 @@ nav {
 
 /* PROJECTS GRID */
 .project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    display: flex;           /* Switch from grid to flexbox */
+    flex-wrap: wrap;         /* Allow cards to wrap to the next line */
+    justify-content: center; /* This ensures the orphan items center themselves */
     gap: 25px;
 }
+
 .project-card {
     background: white;
     padding: 25px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     transition: transform 0.2s;
+    
+    /* NEW FLEX PROPERTIES */
+    flex: 1 1 300px;  /* Grow: 1, Shrink: 1, Basis: 300px */
+    max-width: 350px; /* Prevents cards from getting too wide on huge screens */
+    width: 100%;      /* Ensures it works well on mobile */
 }
-.project-card:hover { transform: translateY(-5px); }
+
+.project-card:hover { 
+    transform: translateY(-5px); 
+}
 .card-header { display: flex; align-items: center; gap: 10px; margin-bottom: 15px; }
 .card-header i { color: #3498db; font-size: 1.2rem; }
 .card-header h4 { margin: 0; }
@@ -281,4 +291,116 @@ footer h3 { margin-bottom: 10px; }
     }
     .timeline-content { border-left: 2px solid #e0e0e0; padding-left: 15px; }
     .hero h1 { font-size: 2rem; }
+}
+
+.devicon-python-plain, .devicon-r-plain, .devicon-snowflake-original, 
+.devicon-microsoftsqlserver-plain, .devicon-docker-plain, 
+.devicon-git-plain, .devicon-jenkins-line, .devicon-rstudio-plain {
+    transition: transform 0.2s ease;
+    cursor: pointer;
+    margin: 10px; /* Adds breathing room around icons */
+}
+
+/* Makes the icon pop out when you hover */
+.tags i:hover {
+    transform: scale(1.2); 
+}
+
+/* REFERENCES SECTION */
+.references-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.ref-header {
+    text-align: center;
+    color: #3498db;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+}
+
+.ref-header i { margin-right: 8px; }
+
+.ref-card {
+    background: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border-left: 3px solid #ccc; /* Neutral grey border */
+    transition: 0.2s;
+}
+
+.ref-card:hover {
+    border-left: 3px solid #3498db; /* Turns blue on hover */
+    transform: translateX(5px);
+}
+
+.ref-card h5 {
+    font-size: 1.1rem;
+    color: #2c3e50;
+    margin-bottom: 2px;
+}
+
+.ref-role {
+    font-weight: 600;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.ref-org {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+.ref-note {
+    text-align: center;
+    color: #95a5a6;
+    margin-top: 30px;
+    font-size: 0.9rem;
+}
+
+/* Mobile check for References */
+@media (max-width: 768px) {
+    .references-wrapper {
+        grid-template-columns: 1fr; /* Stack them on phone */
+        gap: 20px;
+    }
+}
+
+/* RESEARCH IMPROVEMENTS */
+.research-bullets {
+    list-style: none; /* Remove default dots */
+    padding: 0;
+    margin-top: 10px;
+}
+
+.research-bullets li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px; /* Space between bullets */
+    font-size: 0.9rem;
+    color: #444;
+    line-height: 1.5;
+}
+
+.research-bullets li::before {
+    content: '›'; /* A nice subtle arrow */
+    position: absolute;
+    left: 0;
+    color: #3498db; /* Blue accent color */
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    top: -1px;
+}
+
+.research-bullets strong {
+    color: #2c3e50;
+    font-weight: 600;
 }

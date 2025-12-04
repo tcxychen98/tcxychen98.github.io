@@ -6,6 +6,7 @@
     <title>Timothy Chen Xian Yii | Data Analytics Developer</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 </head>
 <body>
 
@@ -18,6 +19,7 @@
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
+                <li><a href="#references">References</a></li>
                 <li><a href="#contact" class="btn-primary">Contact</a></li>
             </ul>
         </div>
@@ -31,7 +33,7 @@
             
             <h1>Hi, I'm Timothy Chen.</h1>
             <h2>Data Analytics Developer & Data Scientist</h2>
-            <p>Specializing in ETL Pipelines, AI Implementation, and Cloud Data Warehousing (Snowflake).</p>
+            <p>I build data pipelines, develop analytical solutions, and implement AI-driven insights using modern cloud platforms.</p>
             <div class="hero-btns">
                 <a href="#experience" class="btn-outline">View My Work</a>
                 
@@ -67,11 +69,22 @@
                     <p class="edu-grade">Pass with Distinction (CGPA: 3.98)</p>
                     
                     <div class="research-highlight">
-                        <strong><i class="fas fa-microscope"></i> Research Project:</strong>
-                        <p>Detecting Early Signs of Depression in Social Media Using Transformer Techniques.</p>
-                        <p class="research-desc">Developed a Transformer-based LLM model (BERT architecture) to detect depressive language patterns in Reddit posts for early mental health intervention.</p>
+                        <strong><i class="fas fa-microscope"></i> Research Focus:</strong>
+                        <p style="margin-bottom: 5px; font-weight: 500;">Detecting Early Signs of Depression in Social Media Using Transformer-based Techniques</p>
+                        
+                        <ul class="research-bullets">
+                            <li>
+                                <strong>Objective:</strong> Designed a Transformer-based predictive model using BERT architecture to identify early indicators of depression from Reddit posts.
+                            </li>
+                            <li>
+                                <strong>Methodology:</strong> Performed data scraping, text preprocessing, and sentiment classification. Fine-tuned BERT for domain-specific linguistic patterns and experimented with attention mechanisms.
+                            </li>
+                            <li>
+                                <strong>Outcome:</strong> Achieved improved accuracy and recall in detecting subtle depressive expressions, enabling potential applications in automated moderation tools.
+                            </li>
+                        </ul>
                     </div>
-                    
+
                     <div class="mini-tags">
                         <span>BERT</span><span>LLMs</span><span>Deep Learning</span><span>Python</span>
                     </div>
@@ -89,9 +102,20 @@
                     <p class="edu-grade">First Class Honors (CGPA: 3.52)</p>
 
                     <div class="research-highlight">
-                        <strong><i class="fas fa-chart-line"></i> Research Project:</strong>
-                        <p>Heart Disease Prediction Using Machine Learning Approach.</p>
-                        <p class="research-desc">Built supervised classification models (Logistic Regression, Decision Tree, Naive Bayes) to predict heart disease risk, focusing on optimal accuracy comparison.</p>
+                        <strong><i class="fas fa-chart-line"></i> Research Focus:</strong>
+                        <p style="margin-bottom: 5px; font-weight: 500;">Heart Disease Prediction Using Machine Learning Approach</p>
+                        
+                        <ul class="research-bullets">
+                            <li>
+                                <strong>Objective:</strong> Developed supervised learning models (Logistic Regression, Decision Tree, Naive Bayes) to predict heart disease risk based on clinical attributes.
+                            </li>
+                            <li>
+                                <strong>Methodology:</strong> Conducted extensive EDA, handled missing values, and applied feature scaling. Evaluated models using confusion matrix analysis to find the most effective classifier.
+                            </li>
+                            <li>
+                                <strong>Outcome:</strong> Validated the potential of machine learning in supporting early diagnosis and clinical decision-making through rigorous accuracy and precision testing.
+                            </li>
+                        </ul>
                     </div>
 
                     <div class="mini-tags">
@@ -111,10 +135,9 @@
             <div class="timeline">
                 <!-- Job 1: X-Fab -->
                 <div class="timeline-item">
-                    <div class="timeline-date">Aug 2024 – Oct 2025</div>
+                    <div class="timeline-date">Aug 2024 - Oct 2025</div>
                     <div class="timeline-content">
                         <div class="job-header">
-                            <!-- Make sure xfab.png is in your folder -->
                             <img src="xfab.png" alt="X-Fab Logo" class="company-logo">
                             <div>
                                 <h4>Data Analytics Developer</h4>
@@ -136,7 +159,6 @@
                     <div class="timeline-date">Jan 2022 – Mar 2022</div>
                     <div class="timeline-content">
                         <div class="job-header">
-                            <!-- Make sure pandai.png is in your folder -->
                             <img src="pandai.png" alt="Pandai Logo" class="company-logo">
                             <div>
                                 <h4>Data Analyst Intern</h4>
@@ -186,6 +208,24 @@
                     <p>Designed a cost-effective cloud storage prototype for high-volume manufacturing data.</p>
                 </div>
 
+                <div class="project-card">
+                    <div class="card-header">
+                        <i class="fas fa-tools"></i>
+                        <h4>Tool Chamber Matching Analysis</h4>
+                    </div>
+                    <p><strong>Tech:</strong> RShiny, Jenkins, Git</p>
+                    <p>Performed tool chamber matching analysis to ensure consistent process performance across identical equipment, improving yield stability and reducing variability.</p>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-header">
+                        <i class="fas fa-file-medical-alt"></i>
+                        <h4>Automated Wafer Yield Report</h4>
+                    </div>
+                    <p><strong>Tech:</strong> Python, Automation, Report Generation</p>
+                    <p>Built an automated Python-based reporting pipeline that identifies low-yield wafers from fab production data and generates standardized daily reports.</p>
+                </div>
+
             </div>
         </div>
     </section>
@@ -204,23 +244,79 @@
                     </ul>
                 </div>
                 
-                <div class="skill-category">
-                    <h5><i class="fas fa-code"></i> Languages & Tools</h5>
-                    <div class="tags">
-                        <span>Python</span><span>R</span><span>SQL</span><span>Snowflake</span>
-                        <span>SnowPark</span><span>Docker</span><span>Git</span><span>Jenkins</span>
-                        <span>RShiny</span><span>MSSQL</span>
+            <div class="skill-category">
+                <h5><i class="fas fa-code"></i> Languages & Tools</h5>
+                <div class="tags" style="align-items: center;">
+                    <i class="devicon-python-plain colored" style="font-size: 3rem;" title="Python"></i>
+                    <i class="devicon-r-plain colored" style="font-size: 3rem;" title="R Language"></i>
+                    <i class="devicon-snowflake-original colored" style="font-size: 3rem;" title="Snowflake"></i>
+                    <i class="devicon-microsoftsqlserver-plain colored" style="font-size: 3rem;" title="MSSQL"></i>
+                    <i class="devicon-docker-plain colored" style="font-size: 3rem;" title="Docker"></i>
+                    <i class="devicon-git-plain colored" style="font-size: 3rem;" title="Git"></i>
+                    <i class="devicon-jenkins-line colored" style="font-size: 3rem;" title="Jenkins"></i>
+                    <i class="devicon-rstudio-plain colored" style="font-size: 3rem;" title="RShiny / RStudio"></i>    
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h5><i class="fas fa-layer-group"></i> Core Competencies</h5>
+                <div class="tags">
+                    <span>ETL Design</span><span>Machine Learning</span><span>LLM Modelling</span>
+                    <span>CI/CD Pipelines</span><span>Dashboarding</span><span>Data Visualization</span>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- References Section -->
+    <section id="references" class="section-light">
+        <div class="container">
+            <h3 class="section-title">References</h3>
+            
+            <div class="references-wrapper">
+                
+                <!-- Professional References -->
+                <div class="ref-category">
+                    <h4 class="ref-header"><i class="fas fa-briefcase"></i> Professional</h4>
+                    
+                    <!-- Reference 1 -->
+                    <div class="ref-card">
+                        <h5>Dr. Liew Shan Sung</h5>
+                        <p class="ref-role">Manager - AIDA (Artificial Intelligence & Data Analytics)</p>
+                        <p class="ref-org">X-Fab Sarawak Sdn Bhd</p>
+                    </div>
+
+                    <!-- Reference 2 -->
+                    <div class="ref-card">
+                        <h5>Mrs. Caroline Bong</h5>
+                        <p class="ref-role">DA Section Manager / Staff Engineer</p>
+                        <p class="ref-org">X-Fab Sarawak Sdn Bhd</p>
                     </div>
                 </div>
 
-                <div class="skill-category">
-                    <h5><i class="fas fa-layer-group"></i> Core Competencies</h5>
-                    <div class="tags">
-                        <span>ETL Design</span><span>Machine Learning</span><span>LLM Modelling</span>
-                        <span>CI/CD Pipelines</span><span>Dashboarding</span><span>Data Visualization</span>
+                <!-- Academic References -->
+                <div class="ref-category">
+                    <h4 class="ref-header"><i class="fas fa-university"></i> Academic</h4>
+                    
+                    <!-- Reference 3 -->
+                    <div class="ref-card">
+                        <h5>Assoc. Dr. Kasturi Dewi A/P Varathan</h5>
+                        <p class="ref-role">Research Supervisor / Senior Lecturer</p>
+                        <p class="ref-org">University of Malaya @ Faculty of Computer Science & Information Technology</p>
+                    </div>
+
+                    <!-- Reference 4 -->
+                    <div class="ref-card">
+                        <h5>Dr. Gan Chew Peng</h5>
+                        <p class="ref-role">Research Supervisor / Senior Lecturer</p>
+                        <p class="ref-org">Taylor's University (previously Sunway University)</p>
                     </div>
                 </div>
+
             </div>
+
+            <p class="ref-note"><em>* Full contact details available upon request.</em></p>
         </div>
     </section>
 
