@@ -62,6 +62,17 @@ nav {
     text-align: center;
 }
 
+/* Optional Profile Pic Style */
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 4px solid #f4f6f7;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
 .hero h1 { font-size: 2.5rem; color: #2c3e50; margin-bottom: 10px; }
 .hero h2 { font-size: 1.5rem; color: #7f8c8d; font-weight: 400; margin-bottom: 20px; }
 .hero p { max-width: 600px; margin: 0 auto 30px auto; color: #555; }
@@ -72,13 +83,20 @@ nav {
     padding: 10px 20px;
     border-radius: 5px;
     font-weight: bold;
-    margin-right: 10px;
+    margin-right: 15px;
     transition: 0.3s;
 }
 .btn-outline:hover { background: #3498db; color: white; }
 
-.social-icon { font-size: 1.5rem; margin: 0 10px; color: #555; }
-.social-icon:hover { color: #3498db; }
+.social-icon { 
+    font-size: 1.8rem; 
+    margin: 0 10px; 
+    color: #7f8c8d; 
+    vertical-align: middle;
+    transition: 0.3s;
+}
+.social-icon:hover { color: #0077b5; transform: scale(1.1); }
+.social-icon:nth-child(3):hover { color: #333; } /* GitHub color */
 
 /* SECTIONS COMMON */
 .section-light { background: #f4f6f7; padding: 60px 0; }
@@ -86,60 +104,104 @@ nav {
 .section-title {
     text-align: center;
     font-size: 1.8rem;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     color: #2c3e50;
     position: relative;
 }
 .section-title::after {
     content: '';
     display: block;
-    width: 50px;
-    height: 3px;
+    width: 60px;
+    height: 4px;
     background: #3498db;
     margin: 10px auto 0;
+    border-radius: 2px;
 }
 
-/* EDUCATION GRID */
+/* EDUCATION GRID - UPDATED */
 .education-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 30px;
 }
 .edu-card {
     background: white;
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    border-left: 4px solid #3498db;
-}
-.icon-accent { color: #3498db; font-size: 1.5rem; margin-bottom: 10px; }
-.edu-school { color: #7f8c8d; font-size: 0.9rem; margin-bottom: 10px; }
-
-/* EXPERIENCE TIMELINE */
-.timeline-item {
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-top: 5px solid #3498db;
     display: flex;
-    margin-bottom: 30px;
+    flex-direction: column;
 }
+.edu-header { display: flex; align-items: flex-start; gap: 15px; margin-bottom: 10px; }
+.icon-accent { color: #3498db; font-size: 2rem; }
+.edu-school { color: #7f8c8d; font-size: 0.9rem; margin-top: 2px; }
+.edu-grade { font-weight: bold; color: #27ae60; margin-bottom: 20px; font-size: 0.95rem; }
+
+.research-highlight {
+    background: #f8fcfd;
+    border-left: 3px solid #b3d7ef;
+    padding: 15px;
+    border-radius: 0 5px 5px 0;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+.research-desc { font-size: 0.9rem; color: #555; margin-top: 5px; }
+
+.mini-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; }
+.mini-tags span {
+    background: #eee;
+    font-size: 0.75rem;
+    padding: 3px 8px;
+    border-radius: 4px;
+    color: #666;
+}
+
+/* EXPERIENCE TIMELINE - UPDATED WITH LOGOS */
+.timeline { position: relative; }
+.timeline-item { display: flex; margin-bottom: 40px; }
 .timeline-date {
-    flex: 0 0 140px;
+    flex: 0 0 150px;
     font-weight: bold;
     color: #7f8c8d;
-    padding-top: 5px;
+    padding-top: 15px;
+    text-align: right;
+    padding-right: 25px;
 }
 .timeline-content {
-    border-left: 2px solid #eee;
-    padding-left: 25px;
+    border-left: 2px solid #e0e0e0;
+    padding-left: 30px;
+    padding-bottom: 10px;
+    flex: 1;
 }
-.timeline-content h4 { color: #2c3e50; margin-bottom: 5px; }
-.company { display: block; color: #3498db; margin-bottom: 10px; font-weight: 500; }
+
+/* Job Header with Logo */
+.job-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+.company-logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain; /* Keeps logo aspect ratio */
+    border-radius: 6px;
+    background: white;
+    border: 1px solid #eee;
+    padding: 2px;
+}
+.timeline-content h4 { color: #2c3e50; font-size: 1.1rem; margin: 0; }
+.company { color: #3498db; font-weight: 600; font-size: 0.95rem; }
+
 .timeline-content ul { list-style: disc; padding-left: 20px; color: #555; }
-.timeline-content li { margin-bottom: 5px; }
+.timeline-content li { margin-bottom: 8px; font-size: 0.95rem; }
 
 /* PROJECTS GRID */
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
 }
 .project-card {
     background: white;
@@ -154,14 +216,34 @@ nav {
 .card-header h4 { margin: 0; }
 .project-card p { font-size: 0.95rem; margin-bottom: 10px; color: #555; }
 
-/* SKILLS TAGS */
-.skills-wrapper { display: grid; gap: 30px; }
-.skill-category h5 { margin-bottom: 15px; color: #2c3e50; }
+/* SKILLS SECTION */
+.skills-wrapper { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px; 
+}
+.skill-category h5 { margin-bottom: 15px; color: #2c3e50; font-size: 1.1rem; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+.cert-list { list-style: none; }
+.cert-list li { 
+    margin-bottom: 8px; 
+    font-size: 0.9rem; 
+    color: #555; 
+    position: relative;
+    padding-left: 15px;
+}
+.cert-list li::before {
+    content: '•';
+    color: #3498db;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
 .tags { display: flex; flex-wrap: wrap; gap: 10px; }
 .tags span {
     background: #e1ecf4;
     color: #2c3e50;
-    padding: 5px 12px;
+    padding: 6px 14px;
     border-radius: 20px;
     font-size: 0.9rem;
     font-weight: 500;
@@ -171,25 +253,32 @@ nav {
 footer {
     background: #2c3e50;
     color: white;
-    padding: 50px 0 20px 0;
+    padding: 60px 0 20px 0;
     text-align: center;
 }
 footer h3 { margin-bottom: 10px; }
 .contact-info { margin: 20px 0; }
-.contact-info p { margin: 5px 0; }
+.contact-info p { margin: 8px 0; color: #bdc3c7; }
+.contact-info i { margin-right: 8px; color: #3498db; }
 .footer-bottom {
-    margin-top: 30px;
+    margin-top: 40px;
     font-size: 0.8rem;
-    color: #bdc3c7;
+    color: #7f8c8d;
     border-top: 1px solid #34495e;
     padding-top: 20px;
 }
 
 /* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
-    .nav-links { display: none; } /* Simplified for demo, usually becomes a burger menu */
+    .nav-links { display: none; } 
     .education-grid { grid-template-columns: 1fr; }
     .timeline-item { flex-direction: column; }
-    .timeline-date { margin-bottom: 5px; }
-    .timeline-content { border-left: none; padding-left: 0; }
+    .timeline-date { 
+        text-align: left; 
+        margin-bottom: 10px; 
+        padding-right: 0; 
+        padding-top: 0;
+    }
+    .timeline-content { border-left: 2px solid #e0e0e0; padding-left: 15px; }
+    .hero h1 { font-size: 2rem; }
 }
