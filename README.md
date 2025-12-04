@@ -1,1 +1,1 @@
-A simple portfolio to showcase my experiences, both professionally and academically
+#A simple portfolio to showcase my experiences, both professionally and academically
