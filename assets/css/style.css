@@ -62,7 +62,6 @@ nav {
     text-align: center;
 }
 
-/* Optional Profile Pic Style */
 .profile-pic {
     width: 150px;
     height: 150px;
@@ -96,7 +95,7 @@ nav {
     transition: 0.3s;
 }
 .social-icon:hover { color: #0077b5; transform: scale(1.1); }
-.social-icon:nth-child(3):hover { color: #333; } /* GitHub color */
+.social-icon:nth-child(3):hover { color: #333; }
 
 /* SECTIONS COMMON */
 .section-light { background: #f4f6f7; padding: 60px 0; }
@@ -118,46 +117,178 @@ nav {
     border-radius: 2px;
 }
 
-/* EDUCATION GRID - UPDATED */
+/* EDUCATION & RESEARCH SECTION (RE-DESIGNED) */
 .education-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-}
-.edu-card {
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    border-top: 5px solid #3498db;
     display: flex;
     flex-direction: column;
+    gap: 40px;
 }
-.edu-header { display: flex; align-items: flex-start; gap: 15px; margin-bottom: 10px; }
-.icon-accent { color: #3498db; font-size: 2rem; }
-.edu-school { color: #7f8c8d; font-size: 0.9rem; margin-top: 2px; }
-.edu-grade { font-weight: bold; color: #27ae60; margin-bottom: 20px; font-size: 0.95rem; }
 
-.research-highlight {
-    background: #f8fcfd;
-    border-left: 3px solid #b3d7ef;
-    padding: 15px;
-    border-radius: 0 5px 5px 0;
-    margin-bottom: 20px;
-    flex-grow: 1;
+.edu-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.06);
+    border: 1px solid rgba(0,0,0,0.04);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-.research-desc { font-size: 0.9rem; color: #555; margin-top: 5px; }
 
-.mini-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; }
-.mini-tags span {
-    background: #eee;
+.edu-card:hover { transform: translateY(-8px); }
+
+.edu-header {
+    display: flex;
+    align-items: center;
+    padding: 30px 40px;
+    background: linear-gradient(to right, #ffffff, #f8fbff);
+    border-bottom: 1px solid #f0f4f8;
+    gap: 40px;
+}
+
+.edu-logo-container {
+    flex: 0 0 140px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.edu-logo-v2 {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.05));
+}
+
+.edu-main-info { flex: 1; }
+
+.degree-type {
+    display: inline-block;
+    color: #3498db;
+    font-weight: 700;
+    text-transform: uppercase;
     font-size: 0.75rem;
-    padding: 3px 8px;
-    border-radius: 4px;
-    color: #666;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
 }
 
-/* EXPERIENCE TIMELINE - UPDATED WITH LOGOS */
+.edu-main-info h4 {
+    font-size: 1.6rem;
+    color: #2c3e50;
+    margin-bottom: 5px;
+    line-height: 1.2;
+}
+
+.university {
+    font-size: 1.1rem;
+    color: #555;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.edu-meta {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.edu-meta span {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.grade-highlight {
+    background: #e1f5fe;
+    color: #0277bd;
+    padding: 4px 14px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.8rem !important;
+}
+
+.edu-content { padding: 40px; }
+
+.research-spotlight {
+    background: #f9fafb;
+    border-radius: 15px;
+    padding: 30px;
+    border: 1px solid #edf2f7;
+}
+
+.spotlight-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    color: #3498db;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.research-spotlight h5 {
+    font-size: 1.25rem;
+    color: #2c3e50;
+    margin-bottom: 25px;
+    line-height: 1.4;
+}
+
+.research-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.research-item h6 {
+    color: #3498db;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+
+.research-item p {
+    font-size: 0.95rem;
+    color: #4a5568;
+    line-height: 1.6;
+}
+
+.tech-stack-mini {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-top: 20px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.tech-stack-mini span {
+    background: white;
+    color: #64748b;
+    border: 1px solid #e2e8f0;
+    padding: 5px 15px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* Update Responsive for Education */
+@media (max-width: 850px) {
+    .edu-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 30px;
+        gap: 20px;
+    }
+    .edu-logo-container { height: 80px; flex: 0 0 80px; }
+    .research-grid { grid-template-columns: 1fr; gap: 20px; }
+}
+
+/* EXPERIENCE TIMELINE */
 .timeline { position: relative; }
 .timeline-item { display: flex; margin-bottom: 40px; }
 .timeline-date {
@@ -175,7 +306,6 @@ nav {
     flex: 1;
 }
 
-/* Job Header with Logo */
 .job-header {
     display: flex;
     align-items: center;
@@ -185,7 +315,7 @@ nav {
 .company-logo {
     width: 50px;
     height: 50px;
-    object-fit: contain; /* Keeps logo aspect ratio */
+    object-fit: contain;
     border-radius: 6px;
     background: white;
     border: 1px solid #eee;
@@ -197,79 +327,86 @@ nav {
 .timeline-content ul { list-style: disc; padding-left: 20px; color: #555; }
 .timeline-content li { margin-bottom: 8px; font-size: 0.95rem; }
 
-/* PROJECTS GRID */
-.project-grid {
-    display: flex;           /* Switch from grid to flexbox */
-    flex-wrap: wrap;         /* Allow cards to wrap to the next line */
-    justify-content: center; /* This ensures the orphan items center themselves */
-    gap: 25px;
+/* MODERN PROJECTS SLIDER */
+.project-slider {
+    overflow-x: auto;
+    position: relative;
+    padding: 40px 0;
+    scrollbar-width: thin;
+    scrollbar-color: #3498db transparent;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
 }
 
-/* HORIZONTAL SCROLL PROJECT SECTION */
-.project-grid {
+.project-slider::-webkit-scrollbar { height: 6px; }
+.project-slider::-webkit-scrollbar-thumb { background: #3498db; border-radius: 10px; }
+
+.project-track {
     display: flex;
-    flex-wrap: nowrap;       /* Forces items to stay in one line */
-    overflow-x: auto;        /* Enables horizontal scrolling */
-    gap: 25px;
-    padding: 20px 10px;      /* Padding ensures shadows don't get cut off */
-    
-    /* Scroll Snap Logic (Makes it feel like a slider) */
-    scroll-snap-type: x mandatory; 
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
-    
-    /* Alignment */
-    justify-content: flex-start; 
+    gap: 30px;
+    width: max-content;
+    padding: 0 20px;
 }
 
 .project-card {
     background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 350px;
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(0,0,0,0.03);
+    scroll-snap-align: center;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.project-icon-visual {
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0f7ff;
+    font-size: 3.5rem;
+    color: #3498db;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover .project-icon-visual {
+    background: #3498db;
+    color: white;
+}
+
+.card-body {
     padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    transition: transform 0.2s;
-    
-    /* Fixed Width Logic for Slider */
-    min-width: 300px;        /* Cards won't get smaller than this */
-    max-width: 320px;        /* Cards won't get wider than this */
-    flex: 0 0 auto;          /* Prevents cards from shrinking */
-    
-    /* Snap Alignment */
-    scroll-snap-align: start;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
-.project-card:hover { 
-    transform: translateY(-5px); 
-}
-
-/* CUSTOM SCROLLBAR STYLING */
-.project-grid::-webkit-scrollbar {
-    height: 8px;              /* Height of the horizontal scrollbar */
-}
-
-.project-grid::-webkit-scrollbar-track {
-    background: #f1f1f1;      /* Grey background */
-    border-radius: 10px;
-}
-
-.project-grid::-webkit-scrollbar-thumb {
-    background: #ccc;         /* Darker grey handle */
-    border-radius: 10px;
-}
-
-.project-grid::-webkit-scrollbar-thumb:hover {
-    background: #3498db;      /* Turns blue when you grab it */
-}
-
-.card-header {
-    margin-bottom: 20px; /* Increased from default */
+.card-header h4 {
+    font-size: 1.15rem;
+    color: #2c3e50;
+    margin: 0;
+    font-weight: 700;
+    margin-bottom: 15px;
 }
 
 .project-card p {
-    margin-bottom: 15px; 
+    margin-bottom: 12px;
     line-height: 1.6;
     font-size: 0.95rem;
     color: #555;
 }
+
+.project-card strong { color: #3498db; }
 
 /* SKILLS SECTION */
 .skills-wrapper { 
@@ -278,7 +415,6 @@ nav {
     gap: 40px; 
 }
 .skill-category h5 { margin-bottom: 15px; color: #2c3e50; font-size: 1.1rem; border-bottom: 1px solid #eee; padding-bottom: 10px; }
-.cert-list { list-style: none; }
 .cert-list li { 
     margin-bottom: 8px; 
     font-size: 0.9rem; 
@@ -304,6 +440,67 @@ nav {
     font-weight: 500;
 }
 
+.tags i { transition: transform 0.2s ease; cursor: pointer; margin: 10px; }
+.tags i:hover { transform: scale(1.2); }
+
+/* REFERENCES SECTION */
+.references-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.ref-header {
+    text-align: center;
+    color: #3498db;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+}
+
+.ref-card {
+    background: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border-left: 3px solid #ccc;
+    transition: 0.2s;
+}
+
+.ref-card:hover {
+    border-left: 3px solid #3498db;
+    transform: translateX(5px);
+}
+
+.ref-card h5 { font-size: 1.1rem; color: #2c3e50; margin-bottom: 2px; }
+.ref-role { font-weight: 600; color: #555; font-size: 0.9rem; }
+.ref-org { color: #7f8c8d; font-size: 0.9rem; font-style: italic; }
+
+.ref-note { text-align: center; color: #95a5a6; margin-top: 30px; font-size: 0.9rem; }
+
+/* PROJECT LINKS */
+.project-links {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+    display: flex;
+    gap: 15px;
+}
+
+.project-btn {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #3498db;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: 0.2s;
+}
+
+.project-btn:hover { color: #2c3e50; text-decoration: underline; }
+
 /* FOOTER */
 footer {
     background: #2c3e50;
@@ -324,152 +521,16 @@ footer h3 { margin-bottom: 10px; }
 }
 
 /* MOBILE RESPONSIVE */
+@media (max-width: 900px) {
+    .edu-item { grid-template-columns: 1fr; }
+    .edu-academic { border-right: none; border-bottom: 1px solid #eef2f6; }
+}
+
 @media (max-width: 768px) {
-    .nav-links { display: none; } 
-    .education-grid { grid-template-columns: 1fr; }
+    .nav-links { display: none; }
     .timeline-item { flex-direction: column; }
-    .timeline-date { 
-        text-align: left; 
-        margin-bottom: 10px; 
-        padding-right: 0; 
-        padding-top: 0;
-    }
+    .timeline-date { text-align: left; margin-bottom: 10px; padding-right: 0; padding-top: 0; }
     .timeline-content { border-left: 2px solid #e0e0e0; padding-left: 15px; }
     .hero h1 { font-size: 2rem; }
-}
-
-.devicon-python-plain, .devicon-r-plain, .devicon-snowflake-original, 
-.devicon-microsoftsqlserver-plain, .devicon-docker-plain, 
-.devicon-git-plain, .devicon-jenkins-line, .devicon-rstudio-plain {
-    transition: transform 0.2s ease;
-    cursor: pointer;
-    margin: 10px; /* Adds breathing room around icons */
-}
-
-/* Makes the icon pop out when you hover */
-.tags i:hover {
-    transform: scale(1.2); 
-}
-
-/* REFERENCES SECTION */
-.references-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    margin-bottom: 30px;
-}
-
-.ref-header {
-    text-align: center;
-    color: #3498db;
-    margin-bottom: 20px;
-    font-size: 1.2rem;
-    border-bottom: 2px solid #e0e0e0;
-    padding-bottom: 10px;
-}
-
-.ref-header i { margin-right: 8px; }
-
-.ref-card {
-    background: white;
-    padding: 20px;
-    margin-bottom: 15px;
-    border-radius: 6px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    border-left: 3px solid #ccc; /* Neutral grey border */
-    transition: 0.2s;
-}
-
-.ref-card:hover {
-    border-left: 3px solid #3498db; /* Turns blue on hover */
-    transform: translateX(5px);
-}
-
-.ref-card h5 {
-    font-size: 1.1rem;
-    color: #2c3e50;
-    margin-bottom: 2px;
-}
-
-.ref-role {
-    font-weight: 600;
-    color: #555;
-    font-size: 0.9rem;
-}
-
-.ref-org {
-    color: #7f8c8d;
-    font-size: 0.9rem;
-    font-style: italic;
-}
-
-.ref-note {
-    text-align: center;
-    color: #95a5a6;
-    margin-top: 30px;
-    font-size: 0.9rem;
-}
-
-/* Mobile check for References */
-@media (max-width: 768px) {
-    .references-wrapper {
-        grid-template-columns: 1fr; /* Stack them on phone */
-        gap: 20px;
-    }
-}
-
-/* RESEARCH IMPROVEMENTS */
-.research-bullets {
-    list-style: none; /* Remove default dots */
-    padding: 0;
-    margin-top: 10px;
-}
-
-.research-bullets li {
-    position: relative;
-    padding-left: 20px;
-    margin-bottom: 8px; /* Space between bullets */
-    font-size: 0.9rem;
-    color: #444;
-    line-height: 1.5;
-}
-
-.research-bullets li::before {
-    content: '›'; /* A nice subtle arrow */
-    position: absolute;
-    left: 0;
-    color: #3498db; /* Blue accent color */
-    font-weight: bold;
-    font-size: 1.2rem;
-    line-height: 1.2rem;
-    top: -1px;
-}
-
-.research-bullets strong {
-    color: #2c3e50;
-    font-weight: 600;
-}
-
-/* PROJECT LINK BUTTONS */
-.project-links {
-    margin-top: 15px;
-    padding-top: 15px;
-    border-top: 1px solid #eee;
-    display: flex;
-    gap: 15px;
-}
-
-.project-btn {
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: #3498db;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    transition: 0.2s;
-}
-
-.project-btn:hover {
-    color: #2c3e50;
-    text-decoration: underline;
+    .references-wrapper { grid-template-columns: 1fr; }
 }
